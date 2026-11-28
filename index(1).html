@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070B14" />
+  <meta name="description" content="Game top-ups, Free Fire diamonds and premium app subscriptions. Nepal market prices in NPR." />
+  <title>TopUp Gaming Centre | Premium Digital Store</title>
+  <!-- Load Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            cyber: {
+              bg: '#070B14',
+              panel: '#101827',
+              card: '#151D2C',
+              line: '#263548',
+              purple: '#a855f7',
+              pink: '#ec4899',
+              cyan: '#22d3ee',
+              gold: '#facc15',
+              muted: '#b8b2ca',
+            }
+          },
+          boxShadow: {
+            'neon-purple': '0 0 35px rgba(168, 85, 247, 0.25)',
+            'neon-cyan': '0 0 25px rgba(34, 211, 238, 0.2)',
+            'neon-gold': '0 0 28px rgba(250, 204, 21, 0.35)',
+          }
+        }
+      }
+    };
+  </script>
+<style>
+:root { color-scheme: dark; }
+html { scroll-padding-top: 80px; }
+body { background-color:#070B14!important; }
+header { border-color:rgba(56,189,248,.18)!important; }
+a,button { -webkit-tap-highlight-color:transparent; }
+.catalog-section article { box-shadow:0 8px 26px rgba(0,0,0,.14); }
+.catalog-section article:hover { border-color:rgba(56,189,248,.45)!important; }
+</style>
+</head>
+<body class="bg-[#070B14] text-slate-50 font-sans antialiased selection:bg-purple-500/30 selection:text-yellow-300 overflow-x-hidden"
+      style="background-image: radial-gradient(circle at 85% 0%, rgba(50, 16, 92, 0.75) 0%, transparent 38%), radial-gradient(circle at 0% 35%, rgba(23, 16, 75, 0.75) 0%, transparent 34%);">
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#070B14]/90 border-b border-[#263548] backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-[68px] flex items-center justify-between gap-3">
+      <!-- Brand -->
+      <a href="#" class="flex items-center gap-2 font-black tracking-wide text-base sm:text-lg text-white group">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-slate-700 to-slate-950 border border-cyan-400/60 shadow-[0_0_18px_rgba(56,189,248,.18)] group-hover:scale-105 transition-transform"><svg viewBox="0 0 40 40" class="w-6 h-6" fill="none" aria-hidden="true"><path d="M20 3 34 11 31 28 20 37 9 28 6 11Z" stroke="#38BDF8" stroke-width="2.4"/><path d="M20 10 27 19 20 29 13 19Z" stroke="#A78BFA" stroke-width="2"/><path d="M20 10V29M13 19H27" stroke="#38BDF8" stroke-width="1.5"/></svg></span>
+        <span>TOPUP <span class="text-[#38bdf8]">GAMING CENTRE</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[#b8b2ca]">
+        <a href="#catalog" data-nav-cat="diamonds" class="hover:text-white transition-colors">Diamonds</a>
+        <a href="#catalog" data-nav-cat="games" class="hover:text-white transition-colors">Games</a>
+        <a href="#catalog" data-nav-cat="apps" class="hover:text-white transition-colors">Premium Apps</a>
+        <a href="#order" class="hover:text-white transition-colors">How to order</a>
+      </nav>
+
+      <!-- Header Right Actions -->
+      <div class="flex items-center gap-2">
+        <a href="#order"
+           class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-purple-500 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-purple-900/40 transition-all active:scale-95">
+          <span>Order now</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false"
+                class="md:hidden p-2.5 rounded-xl bg-[#171326] border border-[#453568] text-slate-200 hover:text-white hover:border-purple-500 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapsible Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-[#263548] bg-[#0c091a] px-4 py-3 space-y-1">
+      <a href="#catalog" data-nav-cat="diamonds" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#b8b2ca] hover:text-white hover:bg-white/5">💎 Free Fire Diamonds</a>
+      <a href="#catalog" data-nav-cat="games" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#b8b2ca] hover:text-white hover:bg-white/5">🎮 Game Top-ups & Gift Cards</a>
+      <a href="#catalog" data-nav-cat="apps" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#b8b2ca] hover:text-white hover:bg-white/5">👑 Premium Apps</a>
+      <a href="#order" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-yellow-400 hover:bg-white/5">📩 Place Order Request</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-10 pb-8 sm:pt-16 sm:pb-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Hero Left Copy -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-[#22d3ee] font-extrabold tracking-widest uppercase text-[11px] sm:text-xs mb-4">
+            <span class="w-2 h-2 rounded-full bg-[#22d3ee] animate-pulse"></span>
+            Nepal gaming & digital store
+          </div>
+          <h1 class="text-4xl sm:text-6xl lg:text-[4.6rem] font-black leading-[0.98] tracking-tight text-white mb-5">
+            LEVEL UP.<br />
+            <span class="text-[#facc15] drop-shadow-[0_0_28px_rgba(250,204,21,0.35)]">PAY LESS.</span>
+          </h1>
+          <p class="text-[#b8b2ca] text-base sm:text-lg leading-relaxed max-w-xl">
+            Free Fire diamonds, game top-ups, gift cards and premium app subscriptions — all in one place. Browse packages in NPR and send your order request in seconds.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-7">
+            <a href="#catalog"
+               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-purple-500 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-extrabold text-sm sm:text-base shadow-neon-purple transition-all active:scale-95">
+              Explore packages
+            </a>
+            <a href="#order"
+               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#171326] hover:bg-[#1f1933] border border-[#453568] hover:border-purple-400 text-white font-extrabold text-sm sm:text-base transition-all active:scale-95">
+              How to order
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-gradient-to-br from-[#21133c] to-[#0d0b19] border border-[#7440a5] rounded-3xl p-6 sm:p-7 shadow-neon-purple lg:rotate-1 hover:rotate-0 transition-transform duration-300">
+            <div class="flex justify-center mb-3 select-none"><div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-slate-800 to-black border border-cyan-400/50 flex items-center justify-center shadow-[0_0_35px_rgba(56,189,248,.18)]"><svg viewBox="0 0 100 100" class="w-16 h-16" fill="none"><path d="M50 6 88 28 80 70 50 94 20 70 12 28Z" stroke="#38BDF8" stroke-width="3"/><path d="M50 22 72 49 50 78 28 49Z" stroke="#A78BFA" stroke-width="3"/><path d="M50 22V78M28 49H72" stroke="#38BDF8" stroke-width="2"/></svg></div></div>
+            <h2 class="text-center text-xl sm:text-2xl font-black tracking-wide text-white">TOPUP</h2><p class="text-center text-cyan-300 text-xs font-bold tracking-[.25em]">GAMING CENTRE</p>
+            <p class="text-center text-sm text-[#b8b2ca] mt-1">Fast • Simple • Nepal market pricing (NPR)</p>
+            <div class="grid grid-cols-3 gap-2.5 mt-6">
+              <div class="bg-white/[0.04] border border-white/[0.06] rounded-2xl py-3 px-2 text-center">
+                <b class="block text-[#facc15] font-black text-sm sm:text-base">FF</b>
+                <small class="text-[#b8b2ca] text-xs">Diamonds</small>
+              </div>
+              <div class="bg-white/[0.04] border border-white/[0.06] rounded-2xl py-3 px-2 text-center">
+                <b class="block text-[#22d3ee] font-black text-sm sm:text-base">GAMES</b>
+                <small class="text-[#b8b2ca] text-xs">Top-ups</small>
+              </div>
+              <div class="bg-white/[0.04] border border-white/[0.06] rounded-2xl py-3 px-2 text-center">
+                <b class="block text-[#a855f7] font-black text-sm sm:text-base">PRO</b>
+                <small class="text-[#b8b2ca] text-xs">Apps</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Search, Category Filter Pills & Quick-Filter Tags -->
+    <section id="catalog" class="py-6 sm:py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Control Bar Panel -->
+        <div class="bg-[#101827]/90 border border-[#263548] rounded-2xl p-4 sm:p-5 mb-8 shadow-xl backdrop-blur-md">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <!-- Live Search Input -->
+            <div class="relative flex-1 max-w-xl">
+              <span class="absolute inset-y-0 left-3.5 flex items-center text-[#b8b2ca] pointer-events-none">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+                </svg>
+              </span>
+              <input id="searchInput" type="search" placeholder="Search diamonds, PUBG, Netflix, Spotify, 240..."
+                     class="w-full pl-10 pr-10 py-3 rounded-xl bg-[#090814] border border-[#453568] focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/20 text-sm text-white placeholder-[#b8b2ca]/60 outline-none transition-all" />
+              <button id="clearSearchBtn" type="button" aria-label="Clear search"
+                      class="hidden absolute inset-y-0 right-3 items-center text-xs font-bold text-[#b8b2ca] hover:text-white">
+                ✕
+              </button>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Product Categories">
+              <button type="button" data-category="all"
+                      class="cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all cursor-pointer">
+                All Items
+              </button>
+              <button type="button" data-category="diamonds"
+                      class="cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all cursor-pointer">
+                💎 Free Fire Diamonds
+              </button>
+              <button type="button" data-category="games"
+                      class="cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all cursor-pointer">
+                🎮 Games
+              </button>
+              <button type="button" data-category="apps"
+                      class="cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all cursor-pointer">
+                👑 Premium Apps
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick-Filter Tags & Result Counter -->
+          <div class="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3.5 border-t border-[#263548]/70">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-semibold text-[#b8b2ca] mr-1">Quick tags:</span>
+              <button type="button" data-tag="all"
+                      class="tag-pill px-3 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer">
+                All Tags
+              </button>
+              <button type="button" data-tag="Popular"
+                      class="tag-pill px-3 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer">
+                🔥 Popular
+              </button>
+              <button type="button" data-tag="Best value"
+                      class="tag-pill px-3 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer">
+                ⭐ Best Value
+              </button>
+              <button type="button" data-tag="Membership"
+                      class="tag-pill px-3 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer">
+                🎫 Memberships
+              </button>
+            </div>
+            <div id="resultCount" class="text-xs font-semibold text-[#22d3ee]">Showing all products</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Catalog Sections Container -->
+        <div id="catalogContainer" class="space-y-12">
+          <!-- Free Fire Diamonds Section -->
+          <div id="section-diamonds" class="catalog-section">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
+              <div>
+                <div class="text-[#22d3ee] font-extrabold tracking-widest uppercase text-xs mb-1">Free Fire</div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">💎 Diamond packages</h2>
+                <p class="text-[#b8b2ca] text-sm mt-1">Prices in Nepali rupees (NPR) • Instant UID top-up</p>
+              </div>
+            </div>
+            <div id="diamondGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+          </div>
+
+          <!-- Games Section -->
+          <div id="section-games" class="catalog-section">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
+              <div>
+                <div class="text-[#22d3ee] font-extrabold tracking-widest uppercase text-xs mb-1">More games</div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">🎮 Game top-ups & gift cards</h2>
+                <p class="text-[#b8b2ca] text-sm mt-1">Choose a game and ask for the latest available package.</p>
+              </div>
+            </div>
+            <div id="gameGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+          </div>
+
+          <!-- Premium Apps Section -->
+          <div id="section-apps" class="catalog-section">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
+              <div>
+                <div class="text-[#22d3ee] font-extrabold tracking-widest uppercase text-xs mb-1">Digital subscriptions</div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">👑 Premium apps</h2>
+                <p class="text-[#b8b2ca] text-sm mt-1">Ask for current plan, duration and price.</p>
+              </div>
+            </div>
+            <div id="appGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <p class="text-[#b8b2ca] text-xs sm:text-sm mt-4">
+              Subscription availability and pricing can change. Confirm the plan and account requirements before paying.
+            </p>
+          </div>
+        </div>
+
+        <!-- Empty State (Shown when search/filters return 0 items) -->
+        <div id="emptyState" class="hidden text-center py-14 px-4 bg-[#101827] border border-[#263548] rounded-3xl">
+          <div class="text-4xl mb-3">🔍</div>
+          <h3 class="text-lg font-extrabold text-white">No matching packages found</h3>
+          <p class="text-sm text-[#b8b2ca] max-w-md mx-auto mt-1">
+            Try clearing your search term or switching back to "All Items" to view all Free Fire diamonds, games, and subscriptions.
+          </p>
+          <button id="resetFiltersBtn" type="button"
+                  class="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm transition-colors cursor-pointer">
+            Reset all filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Request & Live Preview Section -->
+    <section id="order" class="py-10 sm:py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-6">
+          <div class="text-[#22d3ee] font-extrabold tracking-widest uppercase text-xs mb-1">Simple ordering</div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">📩 Place an order request</h2>
+          <p class="text-[#b8b2ca] text-sm mt-1">Fill this in, check the live preview, and copy your order message to send on Instagram.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-gradient-to-br from-[#21113d] to-[#10101e] border border-[#633b91] rounded-3xl p-5 sm:p-8 shadow-neon-purple">
+          <!-- Left Column: Form Inputs -->
+          <div class="lg:col-span-7">
+            <form id="orderForm" class="space-y-4">
+              <div>
+                <label for="item" class="block text-xs sm:text-sm font-bold text-violet-200 mb-1.5">Product / Package *</label>
+                <select id="item" required
+                        class="w-full p-3.5 rounded-xl bg-[#090814] border border-[#453568] focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/20 text-white text-sm outline-none transition-all">
+                  <option value="">Choose a product</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="player" class="text-xs sm:text-sm font-bold text-violet-200">Player ID / Account detail</label>
+                    <span id="savedBadge" class="hidden text-[11px] font-semibold text-[#22d3ee]">Auto-saved</span>
+                  </div>
+                  <input id="player" type="text" placeholder="e.g. 123456789 (UID)"
+                         class="w-full p-3.5 rounded-xl bg-[#090814] border border-[#453568] focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/20 text-white text-sm placeholder-[#b8b2ca]/50 outline-none transition-all" />
+                </div>
+
+                <div>
+                  <label for="name" class="block text-xs sm:text-sm font-bold text-violet-200 mb-1.5">Your name</label>
+                  <input id="name" type="text" placeholder="Your name"
+                         class="w-full p-3.5 rounded-xl bg-[#090814] border border-[#453568] focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/20 text-white text-sm placeholder-[#b8b2ca]/50 outline-none transition-all" />
+                </div>
+              </div>
+
+              <!-- localStorage Clear Action -->
+              <div id="savedControls" class="hidden flex items-center justify-between text-xs text-[#b8b2ca] bg-white/[0.04] px-3.5 py-2 rounded-xl border border-white/[0.06]">
+                <span>💾 Your Name & Player ID are saved locally for faster repeat orders.</span>
+                <button id="clearSavedBtn" type="button" class="text-pink-400 hover:text-pink-300 font-bold underline ml-2 shrink-0 cursor-pointer">
+                  Clear saved info
+                </button>
+              </div>
+
+              <div>
+                <label for="note" class="block text-xs sm:text-sm font-bold text-violet-200 mb-1.5">Extra note</label>
+                <textarea id="note" rows="3" placeholder="Package duration, platform, payment method (eSewa / Khalti / Bank), or other details"
+                          class="w-full p-3.5 rounded-xl bg-[#090814] border border-[#453568] focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/20 text-white text-sm placeholder-[#b8b2ca]/50 outline-none transition-all resize-y"></textarea>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-col sm:flex-row gap-3 pt-1">
+                <button type="submit"
+                        class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-purple-500 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-extrabold text-sm shadow-lg shadow-purple-900/40 transition-all active:scale-95 cursor-pointer">
+                  <span>📋 Copy order message</span>
+                </button>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                   class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#171326] hover:bg-[#221b38] border border-pink-500/50 hover:border-pink-400 text-pink-200 font-extrabold text-sm transition-all active:scale-95">
+                  <span>Open Instagram @topup_gaming_centre ↗</span>
+                </a>
+              </div>
+
+              <p class="text-xs text-[#b8b2ca] leading-relaxed">
+                This website prepares an order message only. It does not accept payments or automatically deliver top-ups. Confirm availability and payment instructions directly with the seller.
+              </p>
+            </form>
+          </div>
+
+          <!-- Right Column: Live Order Message Preview & Safety Notice -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-4">
+            <!-- Live Preview Card -->
+            <div class="bg-[#090814] border border-[#453568] rounded-2xl p-4 sm:p-5 flex-1 flex flex-col">
+              <div class="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-[#263548]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-xs font-extrabold uppercase tracking-wider text-[#22d3ee]">Live Order Message Preview</span>
+                </div>
+                <button id="quickCopyPreviewBtn" type="button"
+                        class="text-xs font-bold px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-yellow-300 border border-yellow-400/30 transition-colors cursor-pointer">
+                  Copy
+                </button>
+              </div>
+              <pre id="messagePreview" class="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-slate-200 flex-1 select-all"></pre>
+              <div class="mt-3 pt-2.5 border-t border-[#263548]/60 text-[11px] text-[#b8b2ca] flex items-center justify-between">
+                <span>1. Select package & fill details</span>
+                <span>2. Copy & DM on Instagram</span>
+              </div>
+            </div>
+
+            <!-- Safety Notice -->
+            <div class="border border-amber-500/40 bg-yellow-400/10 text-amber-100 p-4 rounded-2xl text-xs sm:text-sm leading-relaxed">
+              <strong class="text-yellow-300 font-extrabold block mb-0.5">🛡️ Safety tip:</strong>
+              Never share your password, OTP, or recovery codes. Only provide the Player ID (UID) needed for a game top-up.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#263548] py-8 sm:py-10 text-[#b8b2ca] text-xs sm:text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-4">
+      <div>
+        <b class="text-white font-extrabold text-sm sm:text-base">TOPUP GAMING CENTRE</b>
+        <p class="mt-1">Digital gaming • Top-ups • Gift cards • Apps</p>
+      </div>
+      <div class="sm:text-right">
+        <p>Prices shown in NPR • Confirm before payment</p>
+        <p class="mt-1">© <span id="year"></span> TopUp Gaming Centre</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" role="status" aria-live="polite"
+       class="fixed bottom-5 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none bg-slate-50 text-slate-950 px-5 py-3 rounded-full font-extrabold text-xs sm:text-sm shadow-2xl border border-purple-300 z-50 transition-all duration-200 flex items-center gap-2">
+    <span id="toastIcon">✅</span>
+    <span id="toastText">Order message copied!</span>
+  </div>
+
+  <script>
+    /**
+     * Product Catalog Data
+     * Preserves all original NPR pricing, Free Fire diamond packages, games, and premium apps.
+     */
+    const diamonds = [
+      { title: "115 Diamonds", priceNum: 110, tag: "Starter" },
+      { title: "240 Diamonds", priceNum: 210, tag: "Popular" },
+      { title: "355 Diamonds", priceNum: 315, tag: "Pack" },
+      { title: "610 Diamonds", priceNum: 525, tag: "Best value" },
+      { title: "1,090 Diamonds", priceNum: 950, tag: "Mega pack" },
+      { title: "1,240 Diamonds", priceNum: 1045, tag: "Pack" },
+      { title: "2,530 Diamonds", priceNum: 2030, tag: "Mega chest" },
+      { title: "Weekly Membership", priceNum: 210, tag: "Membership" },
+      { title: "Lite Weekly Membership", priceNum: 110, tag: "Membership" },
+      { title: "Monthly Membership", priceNum: 2100, tag: "Membership" }
+    ];
+
+    const games = [
+      { title: "PUBG Mobile", desc: "UC top-up, Royale Pass and more", icon: "🎯", tag: "Popular" },
+      { title: "Call of Duty Mobile", desc: "CP top-up, Battle Pass and more", icon: "🪖", tag: "Game top-up" },
+      { title: "Roblox", desc: "Robux and gift cards", icon: "🧱", tag: "Game top-up" },
+      { title: "Mobile Legends", desc: "Diamonds, Starlight and more", icon: "⚔️", tag: "Game top-up" },
+      { title: "Game Gift Cards", desc: "Ask about supported games and regions", icon: "🎁", tag: "Best value" },
+      { title: "Other Games", desc: "Tell us the game and platform", icon: "🎮", tag: "Game top-up" }
+    ];
+
+    const apps = [
+      { title: "Spotify Premium", desc: "Music subscription", icon: "🎵", tag: "Popular" },
+      { title: "Netflix", desc: "Movies and series", icon: "🍿", tag: "Popular" },
+      { title: "Crunchyroll", desc: "Anime streaming", icon: "🍥", tag: "Subscription" },
+      { title: "YouTube Premium", desc: "Ad-free video and music", icon: "▶️", tag: "Best value" },
+      { title: "Instagram Premium", desc: "Ask about available services", icon: "📸", tag: "Subscription" },
+      { title: "Disney+", desc: "Movies and series", icon: "✨", tag: "Subscription" },
+      { title: "Canva Pro", desc: "Design tools", icon: "🎨", tag: "Best value" },
+      { title: "ChatGPT Plus", desc: "AI subscription", icon: "🤖", tag: "Popular" }
+    ];
+
+    // Helper: Format NPR price consistently
+    const formatMoney = (n) => "Rs. " + n.toLocaleString("en-IN");
+
+    // Helper: Canonical dropdown value so card selection and <select> stay 100% synced
+    const getDiamondOptionValue = (d) => `${d.title} — ${formatMoney(d.priceNum)}`;
+
+    // Application Filter & Storage State
+    const state = {
+      search: "",
+      category: "all",
+      tag: "all"
+    };
+
+    const STORAGE_KEYS = {
+      name: "idsellerbro_customer_name",
+      player: "idsellerbro_player_id"
+    };
+
+    // DOM References
+    const diamondGrid = document.getElementById("diamondGrid");
+    const gameGrid = document.getElementById("gameGrid");
+    const appGrid = document.getElementById("appGrid");
+    const sectionDiamonds = document.getElementById("section-diamonds");
+    const sectionGames = document.getElementById("section-games");
+    const sectionApps = document.getElementById("section-apps");
+    const emptyState = document.getElementById("emptyState");
+    const resultCount = document.getElementById("resultCount");
+
+    const searchInput = document.getElementById("searchInput");
+    const clearSearchBtn = document.getElementById("clearSearchBtn");
+    const itemSelect = document.getElementById("item");
+    const playerInput = document.getElementById("player");
+    const nameInput = document.getElementById("name");
+    const noteInput = document.getElementById("note");
+    const messagePreview = document.getElementById("messagePreview");
+    const savedControls = document.getElementById("savedControls");
+    const savedBadge = document.getElementById("savedBadge");
+
+    /**
+     * Populate Product Dropdown (<select id="item">)
+     * Uses exact canonical values matching each card's data-option attribute.
+     */
+    function populateDropdown() {
+      const diamondGroup = document.createElement("optgroup");
+      diamondGroup.label = "💎 Free Fire Diamonds (NPR)";
+      diamonds.forEach((d) => {
+        const val = getDiamondOptionValue(d);
+        const opt = document.createElement("option");
+        opt.value = val;
+        opt.textContent = val;
+        diamondGroup.appendChild(opt);
+      });
+
+      const gameGroup = document.createElement("optgroup");
+      gameGroup.label = "🎮 Game Top-ups & Gift Cards";
+      games.forEach((g) => {
+        const opt = document.createElement("option");
+        opt.value = g.title;
+        opt.textContent = g.title;
+        gameGroup.appendChild(opt);
+      });
+
+      const appGroup = document.createElement("optgroup");
+      appGroup.label = "👑 Premium Apps";
+      apps.forEach((a) => {
+        const opt = document.createElement("option");
+        opt.value = a.title;
+        opt.textContent = a.title;
+        appGroup.appendChild(opt);
+      });
+
+      itemSelect.appendChild(diamondGroup);
+      itemSelect.appendChild(gameGroup);
+      itemSelect.appendChild(appGroup);
+    }
+
+    /**
+     * Render Individual Product Card HTML
+     */
+    function createCardHTML({ title, desc, icon, priceDisplay, tag, actionLabel, optionValue }) {
+      const isHighlight = tag === "Popular" || tag === "Best value";
+      const tagStyle = isHighlight
+        ? "text-yellow-300 border-yellow-400/40 bg-yellow-400/10"
+        : "text-[#22d3ee] border-cyan-500/30 bg-cyan-950/40";
+
+      // Escape quotes safely for HTML attribute
+      const safeOption = optionValue.replace(/"/g, "&quot;");
+
+      return `
+        <article class="group bg-gradient-to-br from-[#171329] to-[#0e0c19] border border-[#263548] hover:border-purple-500 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-neon-purple">
+          <div>
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-3xl select-none transition-transform duration-200 group-hover:scale-110">${icon}</span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border ${tagStyle}">${tag}</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-extrabold text-white mt-3 mb-1">${title}</h3>
+            <p class="text-[#b8b2ca] text-xs sm:text-sm min-h-[36px]">${desc}</p>
+          </div>
+          <div class="mt-3">
+            <div class="text-xl sm:text-2xl font-black text-[#facc15] mb-3.5">${priceDisplay}</div>
+            <button type="button"
+                    data-select-option="${safeOption}"
+                    class="select-pkg-btn w-full py-2.5 px-3.5 rounded-xl border border-purple-500/80 bg-gradient-to-r from-violet-600/90 to-fuchsia-600/90 hover:from-violet-500 hover:to-fuchsia-500 text-white font-extrabold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer">
+              ${actionLabel}
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
+    /**
+     * Filter & Render All Catalog Grids
+     */
+    function renderCatalog() {
+      const q = state.search.trim().toLowerCase();
+
+      const matchesFilter = (item, categoryName) => {
+        if (state.category !== "all" && state.category !== categoryName) return false;
+        if (state.tag !== "all" && item.tag.toLowerCase() !== state.tag.toLowerCase()) return false;
+        if (!q) return true;
+
+        const haystack = `${item.title} ${item.desc || ""} ${item.tag} ${item.priceNum || ""}`.toLowerCase();
+        return haystack.includes(q);
+      };
+
+      const filteredDiamonds = diamonds.filter((d) =>
+        matchesFilter({ ...d, desc: "Free Fire top-up • Nepal" }, "diamonds")
+      );
+      const filteredGames = games.filter((g) => matchesFilter(g, "games"));
+      const filteredApps = apps.filter((a) => matchesFilter(a, "apps"));
+
+      // Render Diamonds
+      diamondGrid.innerHTML = filteredDiamonds
+        .map((d) =>
+          createCardHTML({
+            title: d.title,
+            desc: "Free Fire top-up • Nepal",
+            icon: "💎",
+            priceDisplay: formatMoney(d.priceNum),
+            tag: d.tag,
+            actionLabel: "Select package",
+            optionValue: getDiamondOptionValue(d)
+          })
+        )
+        .join("");
+
+      // Render Games
+      gameGrid.innerHTML = filteredGames
+        .map((g) =>
+          createCardHTML({
+            title: g.title,
+            desc: g.desc,
+            icon: g.icon,
+            priceDisplay: "Ask for price",
+            tag: g.tag,
+            actionLabel: "Enquire",
+            optionValue: g.title
+          })
+        )
+        .join("");
+
+      // Render Apps
+      appGrid.innerHTML = filteredApps
+        .map((a) =>
+          createCardHTML({
+            title: a.title,
+            desc: a.desc,
+            icon: a.icon,
+            priceDisplay: "Ask for price",
+            tag: a.tag,
+            actionLabel: "Enquire",
+            optionValue: a.title
+          })
+        )
+        .join("");
+
+      // Toggle Section Visibility
+      sectionDiamonds.classList.toggle("hidden", filteredDiamonds.length === 0);
+      sectionGames.classList.toggle("hidden", filteredGames.length === 0);
+      sectionApps.classList.toggle("hidden", filteredApps.length === 0);
+
+      const totalVisible = filteredDiamonds.length + filteredGames.length + filteredApps.length;
+      emptyState.classList.toggle("hidden", totalVisible > 0);
+
+      resultCount.textContent =
+        totalVisible === 1 ? "Showing 1 product" : `Showing ${totalVisible} products`;
+
+      updateFilterPillStyles();
+    }
+
+    /**
+     * Update Active Pill & Tag Styling
+     */
+    function updateFilterPillStyles() {
+      document.querySelectorAll(".cat-pill").forEach((btn) => {
+        const isActive = btn.dataset.category === state.category;
+        btn.className = isActive
+          ? "cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-extrabold border border-purple-400 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-md transition-all cursor-pointer"
+          : "cat-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border border-[#453568] bg-[#171326] text-[#b8b2ca] hover:text-white hover:border-purple-500/60 transition-all cursor-pointer";
+      });
+
+      document.querySelectorAll(".tag-pill").forEach((btn) => {
+        const isActive = btn.dataset.tag === state.tag;
+        btn.className = isActive
+          ? "tag-pill px-3 py-1.5 rounded-full text-xs font-extrabold border border-[#22d3ee] bg-cyan-500/20 text-[#22d3ee] transition-all cursor-pointer"
+          : "tag-pill px-3 py-1.5 rounded-full text-xs font-bold border border-[#263548] bg-[#090814] text-[#b8b2ca] hover:text-white hover:border-[#22d3ee]/50 transition-all cursor-pointer";
+      });
+    }
+
+    /**
+     * Format & Update Live Order Message Preview
+     */
+    function buildOrderMessage() {
+      const selectedProduct = itemSelect.value || "[Choose a product above]";
+      const customerName = nameInput.value.trim() || "Not provided";
+      const playerID = playerInput.value.trim() || "Not applicable";
+      const extraNote = noteInput.value.trim() || "None";
+
+      return [
+        `Hello @topup_gaming_centre! I want to order: ${selectedProduct}`,
+        `Name: ${customerName}`,
+        `Player ID: ${playerID}`,
+        `Note: ${extraNote}`,
+        `Please confirm availability and payment details.`
+      ].join("\n");
+    }
+
+    function updateOrderPreview() {
+      messagePreview.textContent = buildOrderMessage();
+    }
+
+    /**
+     * Copy Text to Clipboard (with iframe-safe fallback)
+     */
+    function copyTextToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(
+          () => showToast("Order message copied! Paste it on Instagram DM."),
+          () => fallbackCopy(text)
+        );
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const tempArea = document.createElement("textarea");
+      tempArea.value = text;
+      tempArea.style.position = "fixed";
+      tempArea.style.left = "-9999px";
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      try {
+        document.execCommand("copy");
+        showToast("Order message copied! Paste it on Instagram DM.");
+      } catch (err) {
+        showToast("Select and copy the message from the preview box.", "⚠️");
+      }
+      document.body.removeChild(tempArea);
+    }
+
+    /**
+     * Toast Notification Helper
+     */
+    let toastTimer = null;
+    function showToast(message, icon = "✅") {
+      const toast = document.getElementById("toast");
+      document.getElementById("toastText").textContent = message;
+      document.getElementById("toastIcon").textContent = icon;
+
+      toast.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
+      toast.classList.add("opacity-100", "translate-y-0");
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+        toast.classList.remove("opacity-100", "translate-y-0");
+      }, 2800);
+    }
+
+    /**
+     * localStorage Persistence for Customer Name & Player ID
+     */
+    function loadSavedCustomerInfo() {
+      try {
+        const savedName = localStorage.getItem(STORAGE_KEYS.name) || "";
+        const savedPlayer = localStorage.getItem(STORAGE_KEYS.player) || "";
+        if (savedName) nameInput.value = savedName;
+        if (savedPlayer) playerInput.value = savedPlayer;
+        syncSavedIndicator();
+      } catch (e) {
+        // Ignore storage errors in restricted environments
+      }
+    }
+
+    function saveCustomerInfo() {
+      try {
+        const n = nameInput.value.trim();
+        const p = playerInput.value.trim();
+        if (n) localStorage.setItem(STORAGE_KEYS.name, n);
+        else localStorage.removeItem(STORAGE_KEYS.name);
+
+        if (p) localStorage.setItem(STORAGE_KEYS.player, p);
+        else localStorage.removeItem(STORAGE_KEYS.player);
+
+        syncSavedIndicator();
+      } catch (e) {
+        // Ignore storage errors
+      }
+    }
+
+    function syncSavedIndicator() {
+      const hasSaved = Boolean(nameInput.value.trim() || playerInput.value.trim());
+      savedControls.classList.toggle("hidden", !hasSaved);
+      savedBadge.classList.toggle("hidden", !hasSaved);
+    }
+
+    /**
+     * Event Listeners Setup
+     */
+    // Delegate card "Select package" / "Enquire" button clicks
+    document.getElementById("catalogContainer").addEventListener("click", (e) => {
+      const btn = e.target.closest(".select-pkg-btn");
+      if (!btn) return;
+
+      const optionVal = btn.getAttribute("data-select-option");
+      itemSelect.value = optionVal;
+      updateOrderPreview();
+
+      // Highlight select briefly to confirm selection
+      itemSelect.classList.add("border-[#facc15]", "ring-2", "ring-yellow-400/30");
+      setTimeout(() => {
+        itemSelect.classList.remove("border-[#facc15]", "ring-2", "ring-yellow-400/30");
+      }, 1200);
+
+      document.getElementById("order").scrollIntoView({ behavior: "smooth" });
+      showToast(`Selected: ${optionVal}`, "🎯");
+    });
+
+    // Live Search Input
+    searchInput.addEventListener("input", (e) => {
+      state.search = e.target.value;
+      clearSearchBtn.classList.toggle("hidden", !state.search);
+      clearSearchBtn.classList.toggle("flex", Boolean(state.search));
+      renderCatalog();
+    });
+
+    clearSearchBtn.addEventListener("click", () => {
+      state.search = "";
+      searchInput.value = "";
+      clearSearchBtn.classList.add("hidden");
+      clearSearchBtn.classList.remove("flex");
+      renderCatalog();
+      searchInput.focus();
+    });
+
+    // Category Filter Pills
+    document.querySelectorAll(".cat-pill").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.category = btn.dataset.category;
+        renderCatalog();
+      });
+    });
+
+    // Quick-Filter Tags
+    document.querySelectorAll(".tag-pill").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.tag = btn.dataset.tag;
+        renderCatalog();
+      });
+    });
+
+    // Reset Filters Button (Empty State)
+    document.getElementById("resetFiltersBtn").addEventListener("click", () => {
+      state.search = "";
+      state.category = "all";
+      state.tag = "all";
+      searchInput.value = "";
+      clearSearchBtn.classList.add("hidden");
+      clearSearchBtn.classList.remove("flex");
+      renderCatalog();
+    });
+
+    // Header Navigation Category Links
+    document.querySelectorAll("[data-nav-cat]").forEach((link) => {
+      link.addEventListener("click", () => {
+        state.category = link.getAttribute("data-nav-cat");
+        state.tag = "all";
+        renderCatalog();
+        // Close mobile menu if open
+        document.getElementById("mobileMenu").classList.add("hidden");
+        document.getElementById("mobileMenuBtn").setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenuBtn.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+    // Live Order Form Listeners
+    [itemSelect, playerInput, nameInput, noteInput].forEach((el) => {
+      el.addEventListener("input", () => {
+        updateOrderPreview();
+        if (el === nameInput || el === playerInput) {
+          saveCustomerInfo();
+        }
+      });
+      el.addEventListener("change", updateOrderPreview);
+    });
+
+    // Clear Saved Info Button
+    document.getElementById("clearSavedBtn").addEventListener("click", () => {
+      try {
+        localStorage.removeItem(STORAGE_KEYS.name);
+        localStorage.removeItem(STORAGE_KEYS.player);
+      } catch (e) {}
+      nameInput.value = "";
+      playerInput.value = "";
+      syncSavedIndicator();
+      updateOrderPreview();
+      showToast("Saved Name & Player ID cleared.", "🧹");
+    });
+
+    // Form Submit & Quick Copy Preview Button
+    document.getElementById("orderForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!itemSelect.value) {
+        showToast("Please choose a product or package first.", "⚠️");
+        itemSelect.focus();
+        return;
+      }
+      copyTextToClipboard(buildOrderMessage());
+    });
+
+    document.getElementById("quickCopyPreviewBtn").addEventListener("click", () => {
+      copyTextToClipboard(buildOrderMessage());
+    });
+
+    // Initialize Storefront
+    populateDropdown();
+    loadSavedCustomerInfo();
+    renderCatalog();
+    updateOrderPreview();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
